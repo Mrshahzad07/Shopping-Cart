@@ -1,0 +1,249 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Updated typography */
+}
+
+/* App Container */
+.App {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f5;
+  color: #333;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(90deg, #4caf50, #009688);
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header .cart-icon-container {
+  display: flex;
+  align-items: center;
+}
+
+header .cart-icon {
+  position: relative;
+}
+
+header .cart-icon svg {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+header .cart-icon svg:hover {
+  transform: scale(1.2);
+}
+
+header .cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+header .cart-text {
+  margin-left: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+header .cart-text:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Product Card */
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: scale(1.05);
+}
+
+.product-card h2 {
+  font-size: 1.6rem;
+  color: #333;
+  margin: 15px 0 10px;
+}
+
+.product-card p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.product-card .price {
+  font-size: 1.4rem;
+  color: #4CAF50;
+  margin-top: 10px;
+}
+
+.product-card button {
+  background: linear-gradient(45deg, #4CAF50, #009688);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.product-card button:hover {
+  background: linear-gradient(45deg, #009688, #4CAF50);
+}
+
+/* Cart Styling */
+.cart-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cart-item button {
+  background-color: #ff4b5c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-item button:hover {
+  background-color: #ff383f;
+}
+
+/* Modal (Product Details) */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  padding: 40px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.modal h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.modal p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.modal .close-btn {
+  background-color: #ff4b5c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.modal .close-btn:hover {
+  background-color: #ff383f;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

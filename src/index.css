@@ -1,0 +1,28 @@
+/* index.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif; /* Use a clean, readable font */
+    background-color: #f0f0f0; /* Light gray background for the whole app */
+    color: #333; /* Default text color */
+}
+
+/* Link styles */
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: teal; /* Set link color */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: #ff4757; /* Change link color on hover */
+}
+
+/* Additional styles can be added here */
